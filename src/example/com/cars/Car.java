@@ -11,12 +11,17 @@ public class Car {
         this.type = type;
     }
 
-    @Override
-    public String toString() {
-        return "Model: " + model + ", Rok: " + year + ", Typ: " + type.getName();
-    }
-
     public CarType getType() {
         return type;
+    }
+
+    public String getFuelInfo() {
+        return "Rodzaj paliwa: " + type.getFuelType();
+    }
+
+    @Override
+    public String toString() {
+        return "Model: " + model + ", Rok: " + year + ", Typ: " + type.getName() +
+                ", Miejsca: " + type.getSeats() + ", " + getFuelInfo();
     }
 }
