@@ -1,4 +1,4 @@
-package example.com.document;
+package example.com.document.app;
 
 public class Document {
     private String name;

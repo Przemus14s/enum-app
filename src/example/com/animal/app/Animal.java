@@ -1,4 +1,4 @@
-package example.com.animal;
+package example.com.animal.app;
 
 public class Animal {
     private String name;

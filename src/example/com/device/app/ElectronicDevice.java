@@ -1,4 +1,4 @@
-package example.com.device;
+package example.com.device.app;
 
 class ElectronicDevice {
     private String brand;

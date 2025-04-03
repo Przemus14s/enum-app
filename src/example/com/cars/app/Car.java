@@ -1,4 +1,4 @@
-package example.com.cars;
+package example.com.cars.app;
 
 public class Car {
     private String model;

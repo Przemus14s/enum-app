@@ -1,4 +1,4 @@
-package example.com.document;
+package example.com.document.app;
 
 public enum DocumentCategory {
     INVOICE("faktura", 1),

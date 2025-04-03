@@ -1,4 +1,4 @@
-package example.com.animal;
+package example.com.animal.app;
 
 import java.util.ArrayList;
 import java.util.List;

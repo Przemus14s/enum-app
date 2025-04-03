@@ -1,4 +1,4 @@
-package example.com.shape;
+package example.com.shape.app;
 
 public class Shape {
     private String name;

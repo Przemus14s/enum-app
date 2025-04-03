@@ -1,4 +1,4 @@
-package example.com.shape;
+package example.com.shape.app;
 
 import java.util.ArrayList;
 import java.util.List;

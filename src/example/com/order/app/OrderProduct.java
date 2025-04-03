@@ -1,4 +1,4 @@
-package example.com.order;
+package example.com.order.app;
 
 class OrderProduct {
     private String name;

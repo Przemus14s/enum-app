@@ -1,4 +1,4 @@
-package example.com.cars;
+package example.com.cars.app;
 
 public enum CarCategory {
     SEDAN("Sedan", 1, "Benzyna", 5),

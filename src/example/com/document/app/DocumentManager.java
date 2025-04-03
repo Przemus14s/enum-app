@@ -1,4 +1,4 @@
-package example.com.document;
+package example.com.document.app;
 
 import java.util.ArrayList;
 import java.util.List;

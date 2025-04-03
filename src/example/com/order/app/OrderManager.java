@@ -1,4 +1,4 @@
-package example.com.order;
+package example.com.order.app;
 
 import java.util.Scanner;
 
