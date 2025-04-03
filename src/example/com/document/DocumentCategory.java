@@ -1,6 +1,6 @@
 package example.com.document;
 
-public enum DocumentType {
+public enum DocumentCategory {
     INVOICE("faktura", 1),
     CONTRACT("kontrakt", 2),
     NOTARIAL_ACT("akt notarialny", 3),
@@ -9,12 +9,12 @@ public enum DocumentType {
     private String document;
     private int id;
 
-    DocumentType(String document, int id) {
+    DocumentCategory(String document, int id) {
         this.document = document;
         this.id = id;
     }
 
-    DocumentType(String document) {
+    DocumentCategory(String document) {
         this.document = document;
     }
 

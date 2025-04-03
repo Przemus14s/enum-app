@@ -1,27 +1,24 @@
 package example.com.shape;
 
-import example.com.shape.ColorType;
-import example.com.shape.Shape;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class ShapeManager {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<Shape> shapes = new ArrayList<>();
-        shapes.add(new Shape("Kwadrat", 'M', ColorType.BLUE));
-        shapes.add(new Shape("Prostokąt", 'X', ColorType.BLACK));
-        shapes.add(new Shape("Trójkąt", 'L', ColorType.RED));
-        shapes.add(new Shape("Romb", 'M', ColorType.GREEN));
+        shapes.add(new Shape("Kwadrat", 'M', ColorCategory.BLUE));
+        shapes.add(new Shape("Prostokąt", 'X', ColorCategory.BLACK));
+        shapes.add(new Shape("Trójkąt", 'L', ColorCategory.RED));
+        shapes.add(new Shape("Romb", 'M', ColorCategory.GREEN));
 
         System.out.println("Wprowadź nazwę, rozmiar ('S', 'M', 'L') oraz kolor");
         String name = scanner.nextLine();
         char size = scanner.nextLine().toUpperCase().charAt(0);
         String colorName = scanner.nextLine();
 
-        ColorType color = getColor(colorName);
+        ColorCategory color = getColor(colorName);
         if (color != null){
             shapes.add(new Shape(name, size, color));
             System.out.println("Utworzono obiekt");
@@ -31,25 +28,25 @@ public class Main {
             System.out.println(shape);
         }
     }
-    public static ColorType getColor(String colorName){
+    public static ColorCategory getColor(String colorName){
         switch(colorName){
             case "czerwony" ->{
-                return ColorType.RED;
+                return ColorCategory.RED;
             }
             case "niebieski" ->{
-                return ColorType.BLUE;
+                return ColorCategory.BLUE;
             }
             case "żółty" ->{
-                return ColorType.YELLOW;
+                return ColorCategory.YELLOW;
             }
             case "zielony" ->{
-                return ColorType.GREEN;
+                return ColorCategory.GREEN;
             }
             case "czarny" ->{
-                return ColorType.BLACK;
+                return ColorCategory.BLACK;
             }
             case "biały" -> {
-                return ColorType.WHITE;
+                return ColorCategory.WHITE;
             }
             default -> {
                 return null;

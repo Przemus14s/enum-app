@@ -5,16 +5,16 @@ import java.util.List;
 
 class Order {
     private int orderId;
-    private List<Product> products;
-    private OrderStatus status;
+    private List<OrderProduct> products;
+    private OrderCategory status;
 
     public Order(int orderId) {
         this.orderId = orderId;
         this.products = new ArrayList<>();
-        this.status = OrderStatus.NEW;
+        this.status = OrderCategory.NEW;
     }
 
-    public void addProduct(Product product) {
+    public void addProduct(OrderProduct product) {
         products.add(product);
         System.out.println("Dodano produkt: " + product.getName());
     }
@@ -26,13 +26,13 @@ class Order {
 
     public double calculateTotal() {
         double total = 0;
-        for (Product product : products) {
+        for (OrderProduct product : products) {
             total += product.getTotalPrice();
         }
         return total;
     }
 
-    public void changeStatus(OrderStatus newStatus) {
+    public void changeStatus(OrderCategory newStatus) {
         this.status = newStatus;
         System.out.println("Status zamówienia zmieniony na: " + status.getStatusName());
     }

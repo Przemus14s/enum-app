@@ -1,11 +1,11 @@
 package example.com.order;
 
-class Product {
+class OrderProduct {
     private String name;
     private double price;
     private int quantity;
 
-    public Product(String name, double price, int quantity) {
+    public OrderProduct(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;

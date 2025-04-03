@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class DeviceManager {
     public static void main(String[] args) {
-        List<Device> devices = new ArrayList<>();
-        devices.add(new Device("Apple iPhone", DeviceType.PHONE, 75));
-        devices.add(new Device("Samsung Galaxy Tab", DeviceType.TABLET, 50));
-        devices.add(new Device("Dell XPS", DeviceType.COMPUTER, 90));
-        devices.add(new Device("Sony Bravia", DeviceType.TELEVISION, 0));
+        List<ElectronicDevice> devices = new ArrayList<>();
+        devices.add(new ElectronicDevice("Apple iPhone", DeviceCategory.PHONE, 75));
+        devices.add(new ElectronicDevice("Samsung Galaxy Tab", DeviceCategory.TABLET, 50));
+        devices.add(new ElectronicDevice("Dell XPS", DeviceCategory.COMPUTER, 90));
+        devices.add(new ElectronicDevice("Sony Bravia", DeviceCategory.TELEVISION, 0));
 
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Lista urządzeń:");
-        for (Device device : devices) {
+        for (ElectronicDevice device : devices) {
             System.out.println(device);
         }
 
@@ -48,7 +48,7 @@ public class Main {
         }
 
         System.out.println("\nKońcowy stan urządzeń:");
-        for (Device device : devices) {
+        for (ElectronicDevice device : devices) {
             System.out.println(device);
         }
 

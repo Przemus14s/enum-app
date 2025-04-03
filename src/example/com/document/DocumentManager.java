@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class DocumentManager {
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
         List<Document> documents = new ArrayList<>();
-        documents.add(new Document("faktura", "rok", 39, DocumentType.INVOICE, 1));
-        documents.add(new Document("kontrakt", "dwa lata", 50, DocumentType.CONTRACT, 2));
-        documents.add(new Document("akt notarialny", "dwa miesiące", 319, DocumentType.NOTARIAL_ACT, 3));
-        documents.add(new Document("certyfikat", "pięć miesięcy", 2, DocumentType.CERTYFICATE, 4));
+        documents.add(new Document("faktura", "rok", 39, DocumentCategory.INVOICE, 1));
+        documents.add(new Document("kontrakt", "dwa lata", 50, DocumentCategory.CONTRACT, 2));
+        documents.add(new Document("akt notarialny", "dwa miesiące", 319, DocumentCategory.NOTARIAL_ACT, 3));
+        documents.add(new Document("certyfikat", "pięć miesięcy", 2, DocumentCategory.CERTYFICATE, 4));
         for(Document document : documents) System.out.println(document);
 
         System.out.println("Wprowadz nazwę");
@@ -24,7 +24,7 @@ public class Main {
         System.out.println("Wprowadz typ dokumentu");
         String type = scanner.nextLine();
 
-        DocumentType documentType = getDocumentType(type);
+        DocumentCategory documentType = getDocumentType(type);
 
         if (documentType != null){
             documents.add(new Document(name, duration, pages, documentType, documentType.getId()));
@@ -45,19 +45,19 @@ public class Main {
         }
     }
 
-    public static DocumentType getDocumentType(String documentName){
+    public static DocumentCategory getDocumentType(String documentName){
         switch(documentName){
             case "faktura" ->{
-                return DocumentType.INVOICE;
+                return DocumentCategory.INVOICE;
             }
             case "kontrakt" ->{
-                return DocumentType.CONTRACT;
+                return DocumentCategory.CONTRACT;
             }
             case "akt notarialny" ->{
-                return DocumentType.NOTARIAL_ACT;
+                return DocumentCategory.NOTARIAL_ACT;
             }
             case "certyfikat" -> {
-                return DocumentType.CERTYFICATE;
+                return DocumentCategory.CERTYFICATE;
             }
             default -> {
                 return null;

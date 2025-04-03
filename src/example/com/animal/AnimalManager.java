@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class AnimalManager {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<Animal> animals = new ArrayList<>();
 
-        animals.add(new Animal("Lew", AnimalType.MAMMAL, 5, 190.5, "Sawanna"));
-        animals.add(new Animal("Orzeł", AnimalType.BIRD, 3, 5.2, "Góry"));
-        animals.add(new Animal("Rekin", AnimalType.FISH, 8, 300.0, "Ocean"));
-        animals.add(new Animal("Kobra", AnimalType.REPTILE, 4, 6.3, "Dżungla"));
+        animals.add(new Animal("Lew", AnimalCategory.MAMMAL, 5, 190.5, "Sawanna"));
+        animals.add(new Animal("Orzeł", AnimalCategory.BIRD, 3, 5.2, "Góry"));
+        animals.add(new Animal("Rekin", AnimalCategory.FISH, 8, 300.0, "Ocean"));
+        animals.add(new Animal("Kobra", AnimalCategory.REPTILE, 4, 6.3, "Dżungla"));
 
         System.out.println("\nLista zwierząt:");
         for (Animal animal : animals) {
@@ -27,7 +27,7 @@ public class Main {
         System.out.print("Podaj typ zwierzęcia (Mammal, Bird, Fish, Reptile): ");
         String typeInput = scanner.nextLine();
 
-        AnimalType type = AnimalType.fromString(typeInput);
+        AnimalCategory type = AnimalCategory.fromString(typeInput);
         if (type == null) {
             System.out.println("Nieprawidłowy typ zwierzęcia!");
             return;

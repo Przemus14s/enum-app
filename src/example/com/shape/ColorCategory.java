@@ -1,6 +1,6 @@
 package example.com.shape;
 
-public enum ColorType {
+public enum ColorCategory {
     RED("czerwony"),
 
     BLUE("niebieski"),
@@ -12,13 +12,13 @@ public enum ColorType {
     private String color;
     private int id;
 
-    ColorType(String color, int id) {
+    ColorCategory(String color, int id) {
         this.color = color;
         this.id = id;
     }
 
 
-    ColorType(String color) {
+    ColorCategory(String color) {
         this.color = color;
     }
 

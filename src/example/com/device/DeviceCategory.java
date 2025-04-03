@@ -1,6 +1,6 @@
 package example.com.device;
 
-enum DeviceType {
+enum DeviceCategory {
     COMPUTER("Komputer"),
     PHONE("Telefon"),
     TABLET("Tablet"),
@@ -8,7 +8,7 @@ enum DeviceType {
 
     private String device;
 
-    DeviceType(String device) {
+    DeviceCategory(String device) {
         this.device = device;
     }
 

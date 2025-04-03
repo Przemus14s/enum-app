@@ -1,6 +1,6 @@
 package example.com.cars;
 
-public enum CarType {
+public enum CarCategory {
     SEDAN("Sedan", 1, "Benzyna", 5),
     SUV("SUV", 2, "Diesel", 7),
     TRUCK("Ciężarówka", 3, "Diesel", 2),
@@ -11,7 +11,7 @@ public enum CarType {
     private String fuelType;
     private int seats;
 
-    CarType(String name, int id, String fuelType, int seats) {
+    CarCategory(String name, int id, String fuelType, int seats) {
         this.name = name;
         this.id = id;
         this.fuelType = fuelType;
@@ -34,8 +34,8 @@ public enum CarType {
         return seats;
     }
 
-    public static CarType fromString(String typeName) {
-        for (CarType type : CarType.values()) {
+    public static CarCategory fromString(String typeName) {
+        for (CarCategory type : CarCategory.values()) {
             if (type.getName().equalsIgnoreCase(typeName)) {
                 return type;
             }

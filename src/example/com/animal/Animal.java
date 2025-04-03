@@ -2,12 +2,12 @@ package example.com.animal;
 
 public class Animal {
     private String name;
-    private AnimalType type;
+    private AnimalCategory type;
     private int age;
     private double weight;
     private String habitat;
 
-    public Animal(String name, AnimalType type, int age, double weight, String habitat) {
+    public Animal(String name, AnimalCategory type, int age, double weight, String habitat) {
         this.name = name;
         this.type = type;
         this.age = age;

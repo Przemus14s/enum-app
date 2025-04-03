@@ -1,6 +1,6 @@
 package example.com.order;
 
-enum OrderStatus {
+enum OrderCategory {
     NEW("Nowe"),
     PROCESSING("W realizacji"),
     SHIPPED("Wysłane"),
@@ -8,7 +8,7 @@ enum OrderStatus {
 
     private String statusName;
 
-    OrderStatus(String statusName) {
+    OrderCategory(String statusName) {
         this.statusName = statusName;
     }
 

@@ -4,10 +4,10 @@ public class Document {
     private String name;
     private String duration;
     private int pages;
-    private DocumentType type;
+    private DocumentCategory type;
     private int id;
 
-    public Document(String name, String duration, int pages, DocumentType type, int id) {
+    public Document(String name, String duration, int pages, DocumentCategory type, int id) {
         this.name = name;
         this.duration = duration;
         this.pages = pages;
@@ -35,7 +35,7 @@ public class Document {
         return pages;
     }
 
-    public DocumentType getType() {
+    public DocumentCategory getType() {
         return type;
     }
 

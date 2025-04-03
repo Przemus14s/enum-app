@@ -2,14 +2,14 @@ package example.com.order;
 
 import java.util.Scanner;
 
-public class Main {
+public class OrderManager {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Order order = new Order(101);
 
-        order.addProduct(new Product("Laptop", 3500.00, 1));
-        order.addProduct(new Product("Myszka", 150.00, 2));
-        order.addProduct(new Product("Klawiatura", 250.00, 1));
+        order.addProduct(new OrderProduct("Laptop", 3500.00, 1));
+        order.addProduct(new OrderProduct("Myszka", 150.00, 2));
+        order.addProduct(new OrderProduct("Klawiatura", 250.00, 1));
 
         System.out.println("\nAktualne zamówienie:\n" + order);
 
@@ -21,7 +21,7 @@ public class Main {
         int quantity = scanner.nextInt();
         scanner.nextLine();
 
-        order.addProduct(new Product(productName, price, quantity));
+        order.addProduct(new OrderProduct(productName, price, quantity));
 
         System.out.println("\nZaktualizowane zamówienie:\n" + order);
 
@@ -35,10 +35,10 @@ public class Main {
         int statusChoice = scanner.nextInt();
 
         switch (statusChoice) {
-            case 1 -> order.changeStatus(OrderStatus.NEW);
-            case 2 -> order.changeStatus(OrderStatus.PROCESSING);
-            case 3 -> order.changeStatus(OrderStatus.SHIPPED);
-            case 4 -> order.changeStatus(OrderStatus.DELIVERED);
+            case 1 -> order.changeStatus(OrderCategory.NEW);
+            case 2 -> order.changeStatus(OrderCategory.PROCESSING);
+            case 3 -> order.changeStatus(OrderCategory.SHIPPED);
+            case 4 -> order.changeStatus(OrderCategory.DELIVERED);
             default -> System.out.println("Niepoprawny wybór statusu.");
         }
 

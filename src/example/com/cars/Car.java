@@ -3,15 +3,15 @@ package example.com.cars;
 public class Car {
     private String model;
     private int year;
-    private CarType type;
+    private CarCategory type;
 
-    public Car(String model, int year, CarType type) {
+    public Car(String model, int year, CarCategory type) {
         this.model = model;
         this.year = year;
         this.type = type;
     }
 
-    public CarType getType() {
+    public CarCategory getType() {
         return type;
     }
 

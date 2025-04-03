@@ -1,6 +1,6 @@
 package example.com.animal;
 
-public enum AnimalType {
+public enum AnimalCategory {
     MAMMAL("Ssaki", "Ryczy"),
     BIRD("Ptaki", "Ćwierka"),
     FISH("Ryby", "Nie wydaje dźwięku"),
@@ -9,7 +9,7 @@ public enum AnimalType {
     private String type;
     private String sound;
 
-    AnimalType(String type, String sound) {
+    AnimalCategory(String type, String sound) {
         this.type = type;
         this.sound = sound;
     }
@@ -22,12 +22,12 @@ public enum AnimalType {
         return sound;
     }
 
-    public static AnimalType fromString(String typeName) {
+    public static AnimalCategory fromString(String typeName) {
         return switch (typeName.toUpperCase()) {
-            case "MAMMAL" -> AnimalType.MAMMAL;
-            case "BIRD" -> AnimalType.BIRD;
-            case "FISH" -> AnimalType.FISH;
-            case "REPTILE" -> AnimalType.REPTILE;
+            case "MAMMAL" -> AnimalCategory.MAMMAL;
+            case "BIRD" -> AnimalCategory.BIRD;
+            case "FISH" -> AnimalCategory.FISH;
+            case "REPTILE" -> AnimalCategory.REPTILE;
             default -> null;
         };
     }

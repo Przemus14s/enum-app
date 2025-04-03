@@ -3,9 +3,9 @@ package example.com.shape;
 public class Shape {
     private String name;
     private char size;
-    private ColorType color;
+    private ColorCategory color;
 
-    public Shape(String name, char size, ColorType color) {
+    public Shape(String name, char size, ColorCategory color) {
         this.name = name;
         this.size = size;
         this.color = color;
@@ -19,7 +19,7 @@ public class Shape {
                         ", color=" + color.getColor();
     }
 
-    public ColorType getColor() {
+    public ColorCategory getColor() {
         return color;
     }
 }

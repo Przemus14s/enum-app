@@ -1,12 +1,12 @@
 package example.com.device;
 
-class Device {
+class ElectronicDevice {
     private String brand;
-    private DeviceType type;
+    private DeviceCategory type;
     private boolean isOn;
     private int batteryLevel;
 
-    public Device(String brand, DeviceType type, int batteryLevel) {
+    public ElectronicDevice(String brand, DeviceCategory type, int batteryLevel) {
         this.brand = brand;
         this.type = type;
         this.isOn = false;
